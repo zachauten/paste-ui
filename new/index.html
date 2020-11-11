@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>New paste</title>
+  <meta name="description" content="Hi">
+  <meta name="author" content="zach">
+  <style>
+    form * { display: block; }
+    body {
+      background-color: lightblue;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      margin: 15px;
+      place-items: center;
+    }
+    nav {
+      /* display: flex;
+      flex-flow: row wrap; */
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      top: 0;
+      width: 100%;
+    }
+    #new-button {
+      background-color: lightgreen;
+      float: right;
+    }
+    #home-button {
+      background-color: coral;
+      padding: auto 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/" id="home-button">pastebin!</a>
+    <a href="/new" id="new-button">New</a>
+  </header>
+  <main>
+    <form action="https://api.zachauten.com/paste" method="post">
+      <label for="paste">New Paste:</label>
+      <textarea id="paste" name="paste" rows="10" cols="50"></textarea>
+      <input type="submit" value="Submit">
+    </form>  
+  </main>
+  <footer>
+    <p>Footer!</p>
+  </footer>
+</body>
+</html>

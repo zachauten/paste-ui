@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+      body {
+        display: grid;
+        grid-template: auto 1fr auto / auto 1fr;
+      }
+      header { grid-column: 1 / 4; }
+      .left { grid-column: 1 / 2; }
+      main { grid-column: 2 / 4; }
+      footer { grid-column: 1 / 4; }
+      textarea { width: 100%; }  
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <div class="left"> Recent pastes:
+      <ul id="list">
+      </ul>
+    </div>
+    <main>
+      <textarea id="text"></textarea>
+    </main>
+    <footer>footer?</footer>
+    <script src="/scripts/paste.js"></script>
+  </body>
+</html> 
